@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SILLICON STORE | Premium Gaming Credits — Elite Security</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper for Carousel Ads -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0A0A0F; color: #fff; overflow-x: hidden; }
+        .orb { position: fixed; border-radius: 50%; filter: blur(90px); z-index: -2; opacity: 0.45; animation: floatGlow 22s infinite alternate; }
+        .orb-1 { width: 65vw; height: 65vw; background: #8b5cf6; top: -30vh; left: -25vw; }
+        .orb-2 { width: 75vw; height: 75vw; background: #3b82f6; bottom: -40vh; right: -35vw; animation-duration: 28s; }
+        @keyframes floatGlow { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(8%,8%) scale(1.2); } }
+        .container { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; position: relative; z-index: 2; }
+        
+        /* Modern Glass Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            padding: 0.8rem 2rem;
+            margin-bottom: 2rem;
+            background: rgba(12, 14, 25, 0.7);
+            backdrop-filter: blur(18px);
+            border-radius: 3rem;
+            border: 1px solid rgba(139,92,246,0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #E2B0FF, #6C63FF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo i { font-size: 2rem; color: #a78bfa; background: none; }
+        
+        .btn-outline { background: rgba(255,255,255,0.05); border: 1.5px solid #a855f7; padding: 8px 26px; border-radius: 60px; cursor: pointer; font-weight: 600; transition: 0.25s; }
+        .btn-outline:hover { background: #8b5cf6; transform: scale(1.03); box-shadow: 0 0 18px #a855f7; }
+        .btn-primary { background: linear-gradient(105deg, #8b5cf6, #6366f1); border: none; padding: 10px 28px; border-radius: 60px; cursor: pointer; font-weight: 700; transition: 0.25s; box-shadow: 0 4px 12px rgba(139,92,246,0.3); }
+        .btn-primary:hover { transform: scale(1.03); box-shadow: 0 8px 22px rgba(139,92,246,0.5); }
+        
+        .hero { text-align: center; padding: 2rem; background: radial-gradient(ellipse at 30% 40%, rgba(139,92,246,0.12), transparent); border-radius: 2.5rem; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; }
+        .gradient-text { background: linear-gradient(125deg, #C084FC, #3B82F6, #F472B6); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% auto; animation: shimmerMove 6s linear infinite; }
+        @keyframes shimmerMove { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+        .flash-sale { background: linear-gradient(95deg, #f97316, #dc2626, #f97316); background-size: 200% auto; animation: flashWave 2s infinite, scalePulse 1.8s infinite; padding: 0.9rem; border-radius: 4rem; margin: 1rem auto; width: fit-content; font-weight: 800; cursor: pointer; }
+        @keyframes flashWave { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+        @keyframes scalePulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); box-shadow: 0 0 18px #f97316; } 100% { transform: scale(1); } }
+        
+        .categories { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
+        .cat-chip { background: rgba(25,28,45,0.8); backdrop-filter: blur(12px); padding: 10px 28px; border-radius: 60px; cursor: pointer; font-weight: 600; transition: 0.25s; border: 1px solid rgba(139,92,246,0.3); }
+        .cat-chip.active, .cat-chip:hover { background: linear-gradient(125deg, #8b5cf6, #6366f1); box-shadow: 0 0 18px #8b5cf6; transform: translateY(-2px); }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.8rem; margin-top: 2rem; }
+        .product-card { background: rgba(18,22,38,0.7); backdrop-filter: blur(12px); padding: 1.6rem; border-radius: 1.8rem; transition: 0.25s; border: 1px solid rgba(255,255,255,0.05); }
+        .product-card:hover { transform: translateY(-8px); border-color: #a855f7; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5); }
+        .price-new { font-size: 2rem; font-weight: 800; color: #FACC15; margin: 0.5rem 0; }
+        
+        /* Modals */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(20px); z-index: 20000; justify-content: center; align-items: center; }
+        .modal.active { display: flex; animation: fadeInModal 0.2s ease; }
+        @keyframes fadeInModal { from { opacity: 0; backdrop-filter: blur(0); } to { opacity: 1; backdrop-filter: blur(20px); } }
+        .modal-content { background: rgba(15,18,32,0.96); backdrop-filter: blur(18px); width: 92%; max-width: 500px; padding: 2rem; border-radius: 2rem; border: 1px solid rgba(139,92,246,0.5); box-shadow: 0 25px 45px rgba(0,0,0,0.5); }
+        .modal-content input, .modal-content textarea { width: 100%; padding: 14px; margin: 10px 0; background: rgba(20,25,45,0.9); border: 1px solid #334155; border-radius: 1.2rem; color: white; font-size: 0.95rem; }
+        .modal-content input:focus { border-color: #a855f7; outline: none; box-shadow: 0 0 8px #a855f7; }
+        
+        .support-fab { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #8b5cf6, #6366f1); width: 64px; height: 64px; border-radius: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; animation: bounceModern 2s infinite; box-shadow: 0 6px 20px rgba(139,92,246,0.5); }
+        @keyframes bounceModern { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #0f172a; backdrop-filter: blur(12px); padding: 12px 28px; border-radius: 60px; border-left: 5px solid #10b981; z-index: 20001; font-weight: 500; animation: slideModern 0.3s; }
+        .toast.error { border-left-color: #ef4444; }
+        @keyframes slideModern { from { opacity: 0; bottom: 0; } to { opacity: 1; bottom: 30px; } }
+        
+        .user-panel { display: flex; gap: 12px; align-items: center; background: rgba(0,0,0,0.45); padding: 5px 20px 5px 12px; border-radius: 60px; }
+        footer { text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        @media (max-width: 700px) { .container { padding: 1rem; } .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="container">
+    <div class="navbar" data-aos="fade-down">
+        <div class="logo"><i class="fas fa-microchip"></i> SILLICON</div>
+        <div class="auth-area" id="authArea">
+            <button class="btn-outline" id="loginNavBtn"><i class="fas fa-sign-in-alt"></i> Log In</button>
+            <button class="btn-primary" id="signupNavBtn"><i class="fas fa-user-plus"></i> Sign Up</button>
+        </div>
+    </div>
+
+    <div class="hero" data-aos="zoom-in">
+        <h1><span class="gradient-text">SILLICON</span><br>Elite Gaming Credits</h1>
+        <div class="flash-sale" id="flashSaleBanner"><i class="fas fa-bolt"></i> 50% JUMA FLASH + MONTHLY 1000 UC GIVEAWAY <i class="fas fa-gem"></i></div>
+        <p style="margin-top: 1rem;">⚡ Instant Delivery • PayPal/Venmo • ID Verified Security</p>
+    </div>
+
+    <!-- Swiper Carousel Ads -->
+    <div class="swiper ad-carousel" data-aos="fade-up" style="margin: 2rem 0; border-radius: 2rem; overflow: hidden;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><div style="background: linear-gradient(145deg, #1a1c2e, #0f111f); padding:1.2rem; text-align:center; border-radius:1.8rem;"><i class="fas fa-trophy" style="font-size:2.8rem; color:#facc15;"></i><h3>🎁 UC GIVEAWAY</h3><p>Every month 1 winner gets 1000 UC</p></div></div>
+            <div class="swiper-slide"><div style="background: linear-gradient(145deg, #1a1c2e, #0f111f); padding:1.2rem; text-align:center; border-radius:1.8rem;"><i class="fab fa-paypal" style="font-size:2.8rem; color:#0070ba;"></i><h3>PayPal + Venmo</h3><p>Cashback 5% on first order</p></div></div>
+            <div class="swiper-slide"><div style="background: linear-gradient(145deg, #1a1c2e, #0f111f); padding:1.2rem; text-align:center; border-radius:1.8rem;"><i class="fas fa-shield-alt" style="font-size:2.8rem; color:#2ecc71;"></i><h3>ID Verified Security</h3><p>Safe & anonymous purchase</p></div></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="categories" id="categoriesContainer">
+        <div class="cat-chip active" data-cat="pubg"><i class="fas fa-gamepad"></i> PUBG UC</div>
+        <div class="cat-chip" data-cat="freefire"><i class="fas fa-fire"></i> FreeFire</div>
+        <div class="cat-chip" data-cat="efootball"><i class="fas fa-futbol"></i> eFootball</div>
+        <div class="cat-chip" data-cat="netflix"><i class="fab fa-netflix"></i> Netflix</div>
+        <div class="cat-chip" data-cat="steam"><i class="fab fa-steam"></i> Steam</div>
+        <div class="cat-chip" data-cat="console"><i class="fas fa-tv"></i> PS/Xbox</div>
+    </div>
+
+    <div id="productsContainer" class="product-grid"></div>
+    <footer><span id="termsLink" style="cursor:pointer; color:#c084fc;">📜 Terms & Policy</span> • <i class="fas fa-globe"></i> Worldwide • <i class="fas fa-headset"></i> 24/7 Support</footer>
+</div>
+
+<div class="support-fab" id="supportFab"><i class="fas fa-headset fa-2x"></i></div>
+
+<!-- MODALS -->
+<div id="authModal" class="modal"><div class="modal-content"><span style="float:right; cursor:pointer; font-size:28px" onclick="closeAuthModal()">&times;</span><h2><i class="fas fa-arrow-right-to-bracket"></i> Welcome Back</h2><input type="email" id="loginEmail" placeholder="Email address"><input type="password" id="loginPassword" placeholder="Password"><button id="loginBtnAction" class="btn-primary" style="width:100%">Sign In →</button><p style="margin-top:18px; text-align:center">No account? <span id="switchToSignup" style="color:#c084fc; font-weight:600; cursor:pointer;">Create free account</span></p></div></div>
+
+<div id="signupModal" class="modal"><div class="modal-content"><span style="float:right; cursor:pointer" onclick="closeSignupModal()">&times;</span><h2><i class="fas fa-id-card"></i> Create Account (ID Verified)</h2><input type="text" id="signupName" placeholder="Full Legal Name (as ID)"><input type="email" id="signupEmail" placeholder="Email"><input type="tel" id="signupPhone" placeholder="Phone Number"><input type="password" id="signupPassword" placeholder="Password (min 6)"><div style="background:rgba(0,0,0,0.3); border-radius:1rem; padding:0.5rem; margin:10px 0;"><i class="fas fa-cloud-upload-alt"></i> ID Document (Passport/Driving License)<input type="file" id="idUpload" accept="image/*" style="background:transparent;"></div><button id="signupFinal" class="btn-primary" style="width:100%">🚀 Register & Verify</button><p style="margin-top:12px; text-align:center">Already registered? <span id="switchToLogin" style="color:#c084fc; cursor:pointer;">Log in</span></p></div></div>
+
+<!-- SUPPORT: identity cross-check with abuse detection -->
+<div id="supportModal" class="modal"><div class="modal-content"><span style="float:right; cursor:pointer" onclick="closeSupportModal()">&times;</span><h2><i class="fas fa-headset"></i> Contact Support (Verified)</h2><p style="color:#94a3b8;">Your identity will be cross-checked with registered account.</p><input type="text" id="supportFullName" placeholder="Full Name (as registered)"><input type="email" id="supportEmailId" placeholder="Email"><input type="tel" id="supportPhoneNum" placeholder="Phone Number"><input type="text" id="supportOrderRef" placeholder="Order ID (optional)"><textarea id="supportMsgText" rows="3" placeholder="Describe your issue... (insults = automatic ban)"></textarea><button id="sendSupportSecure" class="btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> Send Secure Message</button><p style="font-size:0.7rem; margin-top:8px;">⚠️ Abuse or insults will result in immediate account suspension & report to authorities.</p></div></div>
+
+<!-- ACCOUNT / ORDERS / SETTINGS -->
+<div id="accountModal" class="modal"><div class="modal-content"><span style="float:right; cursor:pointer" onclick="closeAccountModal()">&times;</span><h2><i class="fas fa-user-astronaut"></i> My Dashboard</h2><div style="background:rgba(0,0,0,0.35); padding:1rem; border-radius:1.4rem; margin:1rem 0;"><p><strong>👤 Name:</strong> <span id="dispName"></span></p><p><strong>📧 Email:</strong> <span id="dispEmail"></span></p><p><strong>📞 Phone:</strong> <span id="dispPhone"></span></p><p><strong>🔐 ID Status:</strong> <span id="dispVerified" style="color:#2ecc71;">Verified</span></p></div><h3>📜 Order History</h3><div id="ordersList" style="max-height:220px; overflow-y:auto; margin:10px 0;"></div><button onclick="closeAccountModal()" class="btn-outline" style="width:100%">Close</button></div></div>
+
+<!-- TERMS MODAL -->
+<div id="termsModal" class="modal"><div class="modal-content"><h2><i class="fas fa-scale-balanced"></i> Terms of Service</h2><div style="max-height:280px; overflow:auto; font-size:0.9rem; margin:1rem 0;"><p><strong>🔹 Abuse zero-tolerance:</strong> Insults → immediate ban + report to security.</p><p><strong>🔹 ID verification required</strong> for all purchases.</p><p><strong>🔹 VPN/Proxy</strong> usage triggers security block.</p><p><strong>🔹 Digital goods</strong> non-refundable after delivery.</p><p><strong>🔹 Monthly giveaway</strong> random selection among active buyers.</p></div><button onclick="closeTermsModal()" class="btn-primary">I Accept</button></div></div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    AOS.init({ duration: 700, once: true });
+    new Swiper('.ad-carousel', { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 3800 }, pagination: { el: '.swiper-pagination', clickable: true }, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+
+    // ========== SECURE AUTH + ABUSE BAN + VPN DETECTION ==========
+    let currentUser = null;
+    let users = JSON.parse(localStorage.getItem('sillicon_users_premium')) || [];
+    let bannedList = JSON.parse(localStorage.getItem('sillicon_banned_premium')) || [];
+    function saveUsers() { localStorage.setItem('sillicon_users_premium', JSON.stringify(users)); }
+    function saveBanned() { localStorage.setItem('sillicon_banned_premium', JSON.stringify(bannedList)); }
+
+    // Simple VPN detection (mock)
+    function detectVPN() {
+        if (navigator.connection && navigator.connection.rtt > 180) { banVPN(); return true; }
+        return false;
+    }
+    function banVPN() { showToast("🚫 VPN/Proxy not allowed for security", true); document.body.style.filter = "blur(2px)"; document.body.style.pointerEvents = "none"; }
+    detectVPN();
+
+    function showToast(msg, isErr = false) { let t = document.createElement('div'); t.className = `toast ${isErr ? 'error' : ''}`; t.innerHTML = `<i class="fas ${isErr ? 'fa-skull-crossbones' : 'fa-circle-check'}"></i> ${msg}`; document.body.appendChild(t); setTimeout(() => t.remove(), 3800); }
+    function reportAbuse(user, reason) { window.location.href = `mailto:gaade808@gmail.com?subject=ABUSE_${user?.email}&body=User:${user?.name}%0AEmail:${user?.email}%0AReason:${reason}%0ATime:${new Date()}`; console.log("Abuse reported to gaade808@gmail.com"); }
+    function banUser(user, reason) { if (bannedList.includes(user?.email)) return; bannedList.push(user.email); saveBanned(); if (currentUser && currentUser.email === user.email) { currentUser = null; localStorage.removeItem('sillicon_current'); updateUI(); } showToast(`⛔ ACCOUNT BANNED: ${reason}`, true); reportAbuse(user, reason); renderProducts(); }
+    function checkAbuse(text, user) { const bad = ['insult','stupid','idiot','useless','scam','hate','kill','die','fuck','shit','bastard','moron','threat','dumb','fool']; if (bad.some(w => text.toLowerCase().includes(w))) { banUser(user, "Abusive language in support"); return true; } return false; }
+
+    function updateUI() {
+        const area = document.getElementById('authArea');
+        if (currentUser && !bannedList.includes(currentUser.email)) {
+            area.innerHTML = `<div class="user-panel"><i class="fas fa-user-astronaut"></i><span>${currentUser.name.split(' ')[0]}</span><button class="btn-outline" id="accountBtn" style="padding:5px 14px;"><i class="fas fa-chart-simple"></i> Orders</button><button class="btn-outline" id="logoutBtn" style="padding:5px 14px;">Exit</button></div>`;
+            document.getElementById('logoutBtn')?.addEventListener('click', () => { currentUser = null; localStorage.removeItem('sillicon_current'); updateUI(); renderProducts(); showToast("Logged out safely"); });
+            document.getElementById('accountBtn')?.addEventListener('click', openAccountModal);
+        } else {
+            area.innerHTML = `<button class="btn-outline" id="loginNavBtn"><i class="fas fa-sign-in-alt"></i> Log In</button><button class="btn-primary" id="signupNavBtn"><i class="fas fa-user-plus"></i> Sign Up</button>`;
+            document.getElementById('loginNavBtn')?.addEventListener('click', () => openAuthModal());
+            document.getElementById('signupNavBtn')?.addEventListener('click', () => openSignupModal());
+        }
+    }
+    function openAccountModal() { if(currentUser){ document.getElementById('dispName').innerText = currentUser.name; document.getElementById('dispEmail').innerText = currentUser.email; document.getElementById('dispPhone').innerText = currentUser.phone; let ordersHtml = currentUser.orders?.length ? currentUser.orders.map(o => `<div style="background:#00000033; margin:6px 0; padding:8px; border-radius:1rem;">🎮 ${o.item} - $${o.amount}<br><small>${o.date}</small></div>`).join('') : '<p>✨ No purchases yet</p>'; document.getElementById('ordersList').innerHTML = ordersHtml; document.getElementById('accountModal').classList.add('active'); } else showToast("Login first",true); }
+    function closeAccountModal() { document.getElementById('accountModal').classList.remove('active'); }
+    function openAuthModal() { document.getElementById('authModal').classList.add('active'); }
+    function closeAuthModal() { document.getElementById('authModal').classList.remove('active'); }
+    function openSignupModal() { document.getElementById('signupModal').classList.add('active'); }
+    function closeSignupModal() { document.getElementById('signupModal').classList.remove('active'); }
+    function openSupportModal() { document.getElementById('supportModal').classList.add('active'); }
+    function closeSupportModal() { document.getElementById('supportModal').classList.remove('active'); }
+    function openTermsModal() { document.getElementById('termsModal').classList.add('active'); }
+    function closeTermsModal() { document.getElementById('termsModal').classList.remove('active'); }
+
+    // AUTH LOGIC
+    function handleLogin() { const email = document.getElementById('loginEmail').value; const pass = document.getElementById('loginPassword').value; const user = users.find(u => u.email === email && u.password === pass && !bannedList.includes(email)); if (user) { currentUser = user; localStorage.setItem('sillicon_current', JSON.stringify(user)); updateUI(); closeAuthModal(); showToast(`Welcome back, ${user.name} ✨`); renderProducts(); } else showToast("Invalid or banned account", true); }
+    function handleSignup() { const name = document.getElementById('signupName').value; const email = document.getElementById('signupEmail').value; const phone = document.getElementById('signupPhone').value; const pass = document.getElementById('signupPassword').value; const idFile = document.getElementById('idUpload').files[0]; if (!name || !email || !phone || !pass || !idFile) { showToast("All fields + ID image required", true); return; } if (users.find(u => u.email === email)) { showToast("Email exists", true); return; } const newUser = { name, email, phone, password: pass, idVerified: true, orders: [] }; users.push(newUser); saveUsers(); currentUser = newUser; localStorage.setItem('sillicon_current', JSON.stringify(newUser)); updateUI(); closeSignupModal(); showToast("🎉 Account verified! You can now purchase."); renderProducts(); }
+    
+    // Support with identity cross-check
+    function handleSecureSupport() { const supName = document.getElementById('supportFullName').value; const supEmail = document.getElementById('supportEmailId').value; const supPhone = document.getElementById('supportPhoneNum').value; const msg = document.getElementById('supportMsgText').value; if (!supName || !supEmail || !supPhone || !msg) { showToast("Fill all identity fields", true); return; } if (!currentUser) { showToast("Login required first", true); openAuthModal(); return; } if (currentUser.name !== supName || currentUser.email !== supEmail || currentUser.phone !== supPhone) { showToast("Identity mismatch! Use registered details.", true); return; } if (checkAbuse(msg, currentUser)) { closeSupportModal(); return; } showToast("✅ Support request sent! We reply within 2h."); closeSupportModal(); }
+
+    // STORE & PAYPAL
+    const store = { pubg: { name: "PUBG UC", packs: [{ title: "60+6 UC", price: 0.99 },{ title: "300+25 UC", price: 4.99 },{ title: "600+60 UC", price: 9.99 },{ title: "1500+300 UC", price: 24.99 },{ title: "3000+850 UC", price: 49.99 },{ title: "6000+2100 UC", price: 99.99 }] }, freefire: { name: "FreeFire 💎", packs: [{ title: "100+10 💎", price: 0.99 },{ title: "310+31", price: 2.99 },{ title: "520+52", price: 4.99 },{ title: "1060+110", price: 9.99 },{ title: "2180+242", price: 19.99 },{ title: "5600+600", price: 49.99 }] }, efootball: { name: "eFootball", packs: [{ title: "100 Coins", price: 1.99 },{ title: "500+30", price: 8.99 },{ title: "1200+100", price: 19.99 },{ title: "3000+500", price: 44.99 }] }, netflix: { name: "Netflix 4K", packs: [{ title: "Shared 1M", price: 4.00 },{ title: "Private 1M", price: 12.99 }] }, steam: { name: "Steam", packs: [{ title: "$20 Card", price: 20.00 },{ title: "$50 Card", price: 49.50 }] }, console: { name: "PS/Xbox", packs: [{ title: "$10 Card", price: 10.00 },{ title: "$25 Card", price: 25.00 },{ title: "$50 Card", price: 49.00 }] } };
+    let activeCat = "pubg";
+    function renderPayPalButton(containerId, item, price, category) { if (!window.paypal) return; const container = document.getElementById(containerId); if (!container) return; container.innerHTML = ''; paypal.Buttons({ style: { layout: 'vertical', color: 'gold', shape: 'pill', height: 40 }, createOrder: (data, actions) => { if (!currentUser || bannedList.includes(currentUser.email)) { showToast("Login or banned", true); openAuthModal(); return Promise.reject(); } return actions.order.create({ purchase_units: [{ description: `${category} - ${item}`, amount: { value: price.toFixed(2), currency_code: 'USD' } }] }); }, onApprove: (data, actions) => actions.order.capture().then(details => { if (currentUser) { currentUser.orders = currentUser.orders || []; currentUser.orders.push({ item, amount: price, date: new Date().toLocaleString() }); saveUsers(); } showToast(`✅ ${item} delivered! Thank you.`); }), onError: () => showToast("Payment error", true) }).render(`#${containerId}`); }
+    function renderProducts() { const cat = store[activeCat]; if (!cat) return; let html = ''; cat.packs.forEach((p, idx) => { let btnId = `btn_${activeCat}_${idx}`; html += `<div class="product-card"><div class="product-title">${p.title}</div><div class="price-new">$${p.price.toFixed(2)} USD</div><div id="${btnId}" class="paypal-container"></div><div><i class="fab fa-paypal"></i> PayPal / Venmo</div></div>`; }); document.getElementById('productsContainer').innerHTML = html; setTimeout(() => { cat.packs.forEach((p, idx) => { let btnId = `btn_${activeCat}_${idx}`; renderPayPalButton(btnId, p.title, p.price, cat.name); }); }, 100); }
+    function setActiveCategory(cat) { activeCat = cat; document.querySelectorAll('.cat-chip').forEach(c => { if (c.getAttribute('data-cat') === cat) c.classList.add('active'); else c.classList.remove('active'); }); renderProducts(); }
+    document.querySelectorAll('.cat-chip').forEach(c => c.addEventListener('click', () => setActiveCategory(c.getAttribute('data-cat'))));
+    document.getElementById('loginBtnAction')?.addEventListener('click', handleLogin);
+    document.getElementById('signupFinal')?.addEventListener('click', handleSignup);
+    document.getElementById('switchToSignup')?.addEventListener('click', () => { closeAuthModal(); openSignupModal(); });
+    document.getElementById('switchToLogin')?.addEventListener('click', () => { closeSignupModal(); openAuthModal(); });
+    document.getElementById('supportFab')?.addEventListener('click', openSupportModal);
+    document.getElementById('sendSupportSecure')?.addEventListener('click', handleSecureSupport);
+    document.getElementById('termsLink')?.addEventListener('click', openTermsModal);
+    document.getElementById('flashSaleBanner')?.addEventListener('click', () => showToast("🔥 50% OFF on UC & Diamonds!"));
+    const savedSession = localStorage.getItem('sillicon_current');
+    if (savedSession) { try { let u = JSON.parse(savedSession); if (!bannedList.includes(u.email)) currentUser = u; } catch(e){} }
+    updateUI(); setActiveCategory('pubg');
+    window.closeAuthModal = closeAuthModal; window.closeSignupModal = closeSignupModal; window.closeSupportModal = closeSupportModal; window.closeTermsModal = closeTermsModal; window.closeAccountModal = closeAccountModal;
+</script>
+</body>
+</html>
